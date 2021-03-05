@@ -6,12 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node main.js",
-    "dev": "nodemon main.js"
+    "dev": "nodemon ./main.js"
   },
   "author": "Hitesh",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "github:discordjs/opus",
     "discord.js": "^12.5.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "ffmpeg-static": "^4.2.7",
+    "fs": "0.0.1-security",
+    "yt-search": "^2.7.3",
+    "ytdl-core": "^4.5.0"
   }
 }
