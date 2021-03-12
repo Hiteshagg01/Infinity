@@ -1,10 +1,9 @@
-const { VoiceChannel, VoiceConnection, Message, Guild, GuildChannel } = require('discord.js');
-const { search } = require('ffmpeg-static');
 const yts = require('yt-search');
 const ytdl = require('ytdl-core');
 
 module.exports = {
     name: 'play',
+    aliases: ['p', 'pl'],
     description: "Music Command",
     async execute(message, cmd) {
         cmd.shift();
@@ -14,7 +13,7 @@ module.exports = {
         if (!cmd[0]) return message.channel.send(':question:`What do u want to play`');
 
         const videoFinder = async (search) => {
-            message.channel.send(`:face_with_monocle:**Searching**:mag_right: \`${search}\``);
+            message.channel.send(`**Searching**:mag_right: \`${search}\``);
             const videoresult = await yts(search);
             return (videoresult.videos.length > 1 ? videoresult.videos[0] : null);
         }

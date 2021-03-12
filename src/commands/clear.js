@@ -1,5 +1,6 @@
 module.exports = {
     name: 'clear',
+    aliases: ['delete', 'c'],
     description: 'Clears the message from the channel',
     async execute(message, cmd) {
         if (!cmd[1]) return message.channel.send(':question: **How many messages u want to delete**');
