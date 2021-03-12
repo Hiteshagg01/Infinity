@@ -1,0 +1,2 @@
+# Infinity
+Bot for Discord
